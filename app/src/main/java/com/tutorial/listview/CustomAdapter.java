@@ -25,13 +25,10 @@ public class CustomAdapter extends ArrayAdapter<Data> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.content, parent, false);
         }
 
-        // Lookup view for data population
         TextView tvName =  convertView.findViewById(R.id.name_text);
         TextView tvHome =  convertView.findViewById(R.id.place_text);
-        // Populate the data into the template view using the data object
         tvName.setText(user.name);
         tvHome.setText(user.place);
-        // Return the completed view to render on screen
         return convertView;
     }
 }
